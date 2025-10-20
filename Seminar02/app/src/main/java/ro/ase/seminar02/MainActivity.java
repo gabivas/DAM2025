@@ -1,8 +1,10 @@
 package ro.ase.seminar02;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -14,12 +16,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    enum Gen {
-        MASCULIN, FEMININ
-    }
-
     Button btnAfisare;
-    EditText etUtilizator;
+    EditText etUtilizator, etParola;
+    CheckBox cbEsteAngajat;
     Spinner spnGen;
 
     @Override
@@ -33,8 +32,10 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
         etUtilizator = findViewById(R.id.etUtilizator);
+        etParola = findViewById(R.id.etUParola);
         btnAfisare = findViewById(R.id.btnAfisare);
         spnGen = findViewById(R.id.spnGen);
+        cbEsteAngajat = findViewById(R.id.cbEsteAngajar);
         String[] valoriGen = new String[Gen.values().length];
         int nrValori = 0;
         for (Gen gen : Gen.values()) {
@@ -44,7 +45,14 @@ public class MainActivity extends AppCompatActivity {
         spnGen.setAdapter(genAdapter);
 
         btnAfisare.setOnClickListener(view -> {
-            Toast.makeText(this, etUtilizator.getText().toString(), Toast.LENGTH_LONG).show();
+            String username = etUtilizator.getText().toString();
+            String parola = etParola.getText().toString();
+            Gen gen = Gen.valueOf(spnGen.getSelectedItem().toString());
+            boolean esteAngajat = cbEsteAngajat.isChecked();
+
+            Utilizator utilizator = new Utilizator(username, parola, gen, esteAngajat);
+            Toast.makeText(this, utilizator.toString(), Toast.LENGTH_LONG).show();
+            Log.i("utilizator", utilizator.toString());
         });
     }
 }

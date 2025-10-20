@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Seminar02</string>
     <string name="utilizator">Utilizator:</string>
+    <string name="parola">Parola:</string>
     <string name="afisare">Afisare</string>
+    <string name="este_angajat">Este angajat</string>
 </resources>

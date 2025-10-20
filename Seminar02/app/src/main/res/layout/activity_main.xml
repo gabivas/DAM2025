@@ -29,6 +29,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <TextView
+            android:id="@+id/tvLabelParola"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/parola" />
+
+        <EditText
+            android:id="@+id/etUParola"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:id="@+id/cbEsteAngajar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/este_angajat" />
+
         <Spinner
             android:id="@+id/spnGen"
             android:layout_width="match_parent"
