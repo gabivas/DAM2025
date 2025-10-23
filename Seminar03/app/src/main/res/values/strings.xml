@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Seminar03</string>
+    <string name="ron">RON</string>
+    <string name="eur">EUR</string>
+    <string name="salveaza">Salveaza</string>
+    <string name="adauga_nume">Adauga nume:</string>
+</resources>
