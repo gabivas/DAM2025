@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @Override
+        @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.meniu, menu);
         return true;
@@ -49,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
         if (item.getItemId() == R.id.idOptiune1) {
             Toast.makeText(this, "OPTIUNE 1", Toast.LENGTH_SHORT).show();
         }
+        if (item.getItemId() == R.id.idOptiune2) {
+            Intent intent = new Intent(getApplicationContext(), PreiaDateActivity.class);
+            startActivity(intent);        }
         return true;
     }
 }

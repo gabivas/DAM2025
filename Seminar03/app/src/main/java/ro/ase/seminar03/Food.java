@@ -1,5 +1,6 @@
 package ro.ase.seminar03;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 enum Produse {APA, CARTOFI, SUC}
@@ -15,12 +16,12 @@ public class Food {
     private Produse produse;
     private Valuta valuta;
 
-    public Food(String specie, float greutate, int varsta, String taraOrigine, Date dataNastere, Produse produse, Valuta valuta) {
-        this.nume = specie;
-        this.pret = greutate;
-        this.cantitate = varsta;
-        this.adresa = taraOrigine;
-        this.dataLivrare = dataNastere;
+    public Food(String nume, float pret, int cantitate, String adresa, Date dataLivrare, Produse produse, Valuta valuta) {
+        this.nume = nume;
+        this.pret = pret;
+        this.cantitate = cantitate;
+        this.adresa = adresa;
+        this.dataLivrare = dataLivrare;
         this.produse = produse;
         this.valuta = valuta;
     }
@@ -83,12 +84,13 @@ public class Food {
 
     @Override
     public String toString() {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         return "Food{" +
                 "nume='" + nume + '\'' +
                 ", pret=" + pret +
                 ", cantitate=" + cantitate +
                 ", adresa='" + adresa + '\'' +
-                ", dataLivrare=" + dataLivrare +
+                ", dataLivrare=" + sdf.format(dataLivrare) +
                 ", produse=" + produse +
                 ", valuta=" + valuta +
                 '}';

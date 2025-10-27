@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Seminar03">
         <activity
+            android:name=".PreiaDateActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddFoodDeliveryActivity"
             android:exported="false" />
         <activity
