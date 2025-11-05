@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/idOptiune1"
+        android:title="Optiune 1"></item>
+    <item
+        android:id="@+id/idOptiune2"
+        android:title="Deschide activitate secundara"></item>
+    <item
+        android:id="@+id/idOptiune3"
+        android:title="Adauga info"></item>
+</menu>

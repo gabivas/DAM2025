@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Seminar03</string>
+    <string name="ron">RON</string>
+    <string name="eur">EUR</string>
+    <string name="salveaza">Salveaza</string>
+    <string name="adauga_nume">Adauga nume:</string>
+    <string name="adauga_pret">Adauga pret:</string>
+    <string name="adauga_cantitate">Adauga cantitate:</string>
+    <string name="adauga_data_livrare">Adauga data livrare: dd/MM/yyyy</string>
+    <string name="adauga_adresa">Adauga adresa:</string>
+    <string name="paine">Paine</string>
+    <string name="mesaj_initial">Mesaj initial</string>
+    <string name="deschidere_activitate_de_adaugare_date">Deschidere activitate de adaugare date</string>
+</resources>
