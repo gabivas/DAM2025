@@ -48,6 +48,12 @@ public class MainActivity extends AppCompatActivity {
         lvFoodList = findViewById(R.id.lvFood);
         tvInfo = findViewById(R.id.tvInfo);
 
+        tvInfo.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(), NameActivity.class);
+            intent.putExtra("editInfo", tvInfo.getText().toString());
+            launcher2.launch(intent);
+        });
+
         lvFoodList.setOnItemClickListener((adapterView, view, position, l) -> {
             pozitieFoodInLista = position;
             Intent intent = new Intent(getApplicationContext(), AddFoodDeliveryActivity.class);
@@ -87,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         launcher2 = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), res -> {
-            if (res.getResultCode() == RESULT_OK) {
+            if (res.getData().hasExtra("info")) {
                 Intent intent = res.getData();
                 if (intent != null) {
                     String info = intent.getStringExtra("info");
@@ -95,6 +101,8 @@ public class MainActivity extends AppCompatActivity {
                         tvInfo.setText(info);
                     }
                 }
+            } else if (res.getData().hasExtra("editInfo")) {
+                tvInfo.setText(res.getData().getStringExtra("editInfo"));
             }
         });
 

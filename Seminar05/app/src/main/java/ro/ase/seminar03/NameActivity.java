@@ -14,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class NameActivity extends AppCompatActivity {
     EditText etInfo;
     Button btnSave;
+    boolean isEditing = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +29,22 @@ public class NameActivity extends AppCompatActivity {
         etInfo = findViewById(R.id.etInfo);
         btnSave = findViewById(R.id.btnSave);
 
+        Intent editIntent = getIntent();
+        if (editIntent.hasExtra("editInfo")) {
+            isEditing = true;
+            String info = editIntent.getStringExtra("editInfo");
+            etInfo.setText(info);
+        }
+
         btnSave.setOnClickListener(view -> {
             String info = etInfo.getText().toString();
             Intent intent = getIntent();
-            intent.putExtra("info", info);
+            if (isEditing) {
+                intent.putExtra("editInfo", info);
+            } else {
+                intent.putExtra("info", info);
+
+            }
 
             setResult(RESULT_OK, intent);
             finish();
