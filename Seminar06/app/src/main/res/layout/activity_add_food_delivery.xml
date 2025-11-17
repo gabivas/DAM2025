@@ -18,6 +18,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:id="@+id/etLivrator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/adauga_livrator"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etNume" />
+
+    <EditText
         android:id="@+id/etCantitate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,7 +35,7 @@
         android:hint="@string/adauga_cantitate"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etNume" />
+        app:layout_constraintTop_toBottomOf="@id/etLivrator" />
 
     <EditText
         android:id="@+id/etPret"

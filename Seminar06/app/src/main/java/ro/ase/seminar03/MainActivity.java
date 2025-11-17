@@ -153,6 +153,11 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), NameActivity.class);
             launcher2.launch(intent);
         }
+
+        if (item.getItemId() == R.id.idOptiune4) {
+            Intent intent = new Intent(getApplicationContext(), AfisareProduseActivity.class);
+            startActivity(intent);
+        }
         return true;
     }
 }

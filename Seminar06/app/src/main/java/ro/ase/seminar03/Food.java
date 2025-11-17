@@ -10,6 +10,7 @@ enum Valuta {RON, EUR}
 
 public class Food implements Serializable {
     private String nume;
+    private String livrator;
     private float pret;
     private int cantitate;
     private String adresa;
@@ -17,8 +18,9 @@ public class Food implements Serializable {
     private Produse produse;
     private Valuta valuta;
 
-    public Food(String nume, float pret, int cantitate, String adresa, Date dataLivrare, Produse produse, Valuta valuta) {
+    public Food(String nume, String livrator, float pret, int cantitate, String adresa, Date dataLivrare, Produse produse, Valuta valuta) {
         this.nume = nume;
+        this.livrator = livrator;
         this.pret = pret;
         this.cantitate = cantitate;
         this.adresa = adresa;
@@ -63,6 +65,14 @@ public class Food implements Serializable {
         return dataLivrare;
     }
 
+    public void setLivrator(String livrator) {
+        this.livrator = livrator;
+    }
+
+    public String getLivrator() {
+        return livrator;
+    }
+
     public void setDataLivrare(Date dataLivrare) {
         this.dataLivrare = dataLivrare;
     }
@@ -94,6 +104,7 @@ public class Food implements Serializable {
                 ", dataLivrare=" + sdf.format(dataLivrare) +
                 ", produse=" + produse +
                 ", valuta=" + valuta +
+                ", livrator=" + livrator +
                 '}';
     }
 }

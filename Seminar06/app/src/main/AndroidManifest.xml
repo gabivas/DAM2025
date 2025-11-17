@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Seminar03">
         <activity
+            android:name=".AfisareProduseActivity"
+            android:exported="false" />
+        <activity
             android:name=".NameActivity"
             android:exported="false" />
         <activity

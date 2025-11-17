@@ -9,4 +9,7 @@
     <item
         android:id="@+id/idOptiune3"
         android:title="Adauga info"></item>
+    <item
+        android:id="@+id/idOptiune4"
+        android:title="Afisare produs"></item>
 </menu>

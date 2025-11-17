@@ -43,6 +43,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodVH> {
         Food f = items.get(position);
 
         h.tvName.setText(nullCheck(f.getNume()));
+        h.tvLivrator.setText("Livrator: " + nullCheck(f.getLivrator()));
         h.tvProduct.setText("Produs: " + getProduct(f.getProduse()));
         h.tvPriceQty.setText("Preț: " + money.format(f.getPret()) + " " + symbol(f.getValuta())
                 + "  •  Cantitate: " + f.getCantitate());
@@ -90,7 +91,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodVH> {
     }
 
     static class FoodVH extends RecyclerView.ViewHolder {
-        TextView tvName, tvProduct, tvPriceQty, tvAddress, tvDeliveryDate;
+        TextView tvName, tvProduct, tvPriceQty, tvAddress, tvDeliveryDate, tvLivrator;
 
         FoodVH(@NonNull View itemView) {
             super(itemView);
@@ -99,6 +100,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodVH> {
             tvPriceQty = itemView.findViewById(R.id.tvPriceQty);
             tvAddress = itemView.findViewById(R.id.tvAddress);
             tvDeliveryDate = itemView.findViewById(R.id.tvDeliveryDate);
+            tvLivrator = itemView.findViewById(R.id.tvLivrator);
         }
     }
 }

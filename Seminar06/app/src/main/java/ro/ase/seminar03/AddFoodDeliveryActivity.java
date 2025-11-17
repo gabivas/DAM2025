@@ -20,7 +20,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class AddFoodDeliveryActivity extends AppCompatActivity {
-    EditText etNume, etCantitate, etPret, etAdresa, etDataLivrare;
+    EditText etNume, etCantitate, etPret, etAdresa, etDataLivrare, etLivrator;
     Spinner spnProduse;
     RadioButton rbEur;
     Button btnSalveaza;
@@ -36,7 +36,9 @@ public class AddFoodDeliveryActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
         etNume = findViewById(R.id.etNume);
+        etLivrator = findViewById(R.id.etLivrator);
         etAdresa = findViewById(R.id.etAdresa);
         etDataLivrare = findViewById(R.id.etDataLivrare);
         etPret = findViewById(R.id.etPret);
@@ -83,6 +85,7 @@ public class AddFoodDeliveryActivity extends AppCompatActivity {
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
             String nume = etNume.getText().toString();
             String adresa = etAdresa.getText().toString();
+            String livrator = etLivrator.getText().toString();
             Date dataLivrare = null;
             try {
                 dataLivrare = sdf.parse(etDataLivrare.getText().toString());
@@ -93,7 +96,7 @@ public class AddFoodDeliveryActivity extends AppCompatActivity {
             int cantitate = Integer.valueOf(etCantitate.getText().toString());
             Produse produse = Produse.valueOf(spnProduse.getSelectedItem().toString());
             Valuta valuta = rbEur.isChecked() ? Valuta.EUR : Valuta.RON;
-            Food food = new Food(nume, pret, cantitate, adresa, dataLivrare, produse, valuta);
+            Food food = new Food(nume, livrator, pret, cantitate, adresa, dataLivrare, produse, valuta);
             //Log.i("food", food.toString());
             Intent intent = getIntent();
 

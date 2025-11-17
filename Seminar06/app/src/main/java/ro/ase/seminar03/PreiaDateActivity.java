@@ -44,7 +44,7 @@ public class PreiaDateActivity extends AppCompatActivity {
             } catch (ParseException e) {
                 throw new RuntimeException(e);
             }
-            Food food = new Food("De baza", 3, 2, adresa, dataLivrare, Produse.APA, Valuta.RON);
+            Food food = new Food("De baza", "Mihai", 3, 2, adresa, dataLivrare, Produse.APA, Valuta.RON);
             Log.i("food", food.toString());
             finish();
         });

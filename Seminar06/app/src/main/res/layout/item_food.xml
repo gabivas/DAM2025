@@ -22,6 +22,12 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/tvLivrator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Livrator" />
+
+        <TextView
             android:id="@+id/tvProduct"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

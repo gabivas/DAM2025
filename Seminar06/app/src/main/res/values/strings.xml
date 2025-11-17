@@ -11,4 +11,6 @@
     <string name="paine">Paine</string>
     <string name="mesaj_initial">Mesaj initial</string>
     <string name="deschidere_activitate_de_adaugare_date">Deschidere activitate de adaugare date</string>
+    <string name="adauga_livrator">Livrator</string>
+    <string name="mesaj_produse">Produse:</string>
 </resources>
