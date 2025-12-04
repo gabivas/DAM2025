@@ -1,6 +1,9 @@
 package ro.ase.seminar09;
 
-@Entity(tableName = "Biblioteci")
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "Biblioteca")
 public class Biblioteca {
     @PrimaryKey(autoGenerate = true)
     private Long id;
