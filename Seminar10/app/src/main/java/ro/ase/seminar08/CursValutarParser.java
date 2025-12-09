@@ -11,7 +11,6 @@ import org.xml.sax.SAXException;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.util.Date;
 import java.util.Objects;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -33,7 +32,6 @@ public class CursValutarParser {
             DocumentBuilder db = dbf.newDocumentBuilder();
             Document domDoc = db.parse(input);
             domDoc.getDocumentElement().normalize();
-            cursValutar = new CursValutar();
             Node cube = getNodeByName("Cube", domDoc.getDocumentElement());
             if (cube != null) {
                 String data = getAttributeValue(cube, "date");
